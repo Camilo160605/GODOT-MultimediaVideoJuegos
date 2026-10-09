@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cplyhd8hniemn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p5yeh"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3xxk4"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_alop0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rmjiv"]
+
+[node name="Laboratorio3D" type="Node3D" unique_id=1580771327]
+
+[node name="Piso" type="StaticBody3D" parent="." unique_id=1673519561]
+
+[node name="@CollisionShape3D@67686" type="CollisionShape3D" parent="Piso" unique_id=1712102629]
+shape = SubResource("BoxShape3D_p5yeh")
+
+[node name="@MeshInstance3D@67687" type="MeshInstance3D" parent="Piso" unique_id=659646558]
+mesh = SubResource("BoxMesh_3xxk4")
+
+[node name="Cubo" type="RigidBody3D" parent="." unique_id=2072492294]
+transform = Transform3D(0.8660254, -0.5, 0, 0.4698463, 0.81379765, -0.34202012, 0.17101006, 0.2961981, 0.9396926, 0, 4, 0)
+
+[node name="@CollisionShape3D@67688" type="CollisionShape3D" parent="Cubo" unique_id=687505392]
+shape = SubResource("BoxShape3D_alop0")
+
+[node name="@MeshInstance3D@67689" type="MeshInstance3D" parent="Cubo" unique_id=137933161]
+mesh = SubResource("BoxMesh_rmjiv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1298051]
+transform = Transform3D(0.8660254, -0.35355338, 0.35355338, 0, 0.70710677, 0.70710677, -0.5, -0.6123724, 0.6123724, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=602277021]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 3, 8)

@@ -11,6 +11,7 @@ Taller en clase, Diseño Multimedia y Videojuegos (FESC, Ingeniería de Software
 - Niveles 1 a 3: laboratorio.tscn
 - Nivel 4: nivel4.tscn
 - Nivel 5: nivel5.tscn
+- Bonus 3D: lab3d.tscn
 
 ## Notas
 - Los niveles se resolvieron desde el editor, con nodos y propiedades del Inspector.

@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://b6myqdw3vwgki"]
+
+[ext_resource type="Texture2D" uid="uid://da0k0nxn31gkq" path="res://icon.svg" id="1_3egw0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3egw0"]
+size = Vector2(1000, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfv6l"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhx0x"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8lfl"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxp8s"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kngd7"]
+size = Vector2(64, 64)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tqfyg"]
+bounce = 0.6
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3egw0"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5dgii"]
+radius = 32.0
+
+[node name="Laboratorio" type="Node2D" unique_id=1542315678]
+position = Vector2(-22, 2)
+
+[node name="Piso" type="StaticBody2D" parent="." unique_id=615214147]
+position = Vector2(576, 600)
+
+[node name="@CollisionShape2D@29816" type="CollisionShape2D" parent="Piso" unique_id=1389551200]
+shape = SubResource("RectangleShape2D_3egw0")
+
+[node name="@ColorRect@29817" type="ColorRect" parent="Piso" unique_id=933600777]
+offset_left = -500.0
+offset_top = -20.0
+offset_right = 500.0
+offset_bottom = 20.0
+color = Color(0.25, 0.12, 0.02, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Caja" type="RigidBody2D" parent="." unique_id=216701194]
+position = Vector2(850, 548)
+
+[node name="@Sprite2D@29818" type="Sprite2D" parent="Caja" unique_id=499534678]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3egw0")
+
+[node name="@CollisionShape2D@29819" type="CollisionShape2D" parent="Caja" unique_id=896905788]
+shape = SubResource("RectangleShape2D_sfv6l")
+
+[node name="Caja2" type="RigidBody2D" parent="." unique_id=1247465598]
+position = Vector2(850, 484)
+
+[node name="@Sprite2D@29820" type="Sprite2D" parent="Caja2" unique_id=1608902890]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3egw0")
+
+[node name="@CollisionShape2D@29821" type="CollisionShape2D" parent="Caja2" unique_id=478961345]
+shape = SubResource("RectangleShape2D_hhx0x")
+
+[node name="Caja3" type="RigidBody2D" parent="." unique_id=820097171]
+position = Vector2(850, 420)
+
+[node name="@Sprite2D@29822" type="Sprite2D" parent="Caja3" unique_id=182068336]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3egw0")
+
+[node name="@CollisionShape2D@29823" type="CollisionShape2D" parent="Caja3" unique_id=1676993337]
+shape = SubResource("RectangleShape2D_c8lfl")
+
+[node name="Caja4" type="RigidBody2D" parent="." unique_id=663554346]
+position = Vector2(850, 356)
+
+[node name="@Sprite2D@29824" type="Sprite2D" parent="Caja4" unique_id=426231894]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3egw0")
+
+[node name="@CollisionShape2D@29825" type="CollisionShape2D" parent="Caja4" unique_id=1412629199]
+shape = SubResource("RectangleShape2D_rxp8s")
+
+[node name="Caja5" type="RigidBody2D" parent="." unique_id=1620748545]
+position = Vector2(850, 292)
+
+[node name="@Sprite2D@29826" type="Sprite2D" parent="Caja5" unique_id=115548498]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3egw0")
+
+[node name="@CollisionShape2D@29827" type="CollisionShape2D" parent="Caja5" unique_id=712787959]
+shape = SubResource("RectangleShape2D_kngd7")
+
+[node name="Bola" type="RigidBody2D" parent="." unique_id=1515728743]
+position = Vector2(150, 400)
+mass = 3.0
+physics_material_override = SubResource("PhysicsMaterial_tqfyg")
+continuous_cd = 1
+linear_velocity = Vector2(900, -400)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bola" unique_id=1139585186]
+modulate = Color(0.63468736, 0, 0.09624273, 1)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_3egw0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola" unique_id=828530617]
+shape = SubResource("CircleShape2D_5dgii")
